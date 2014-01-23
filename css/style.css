@@ -1,0 +1,148 @@
+/**
+ * Mise en page.
+ */
+
+.limiter {
+  width: 960px;
+  margin: 0 auto;
+}
+
+/**
+ * Typographie.
+ */
+
+body {
+  color: #000000;
+  font-size: 15px;
+  font-family: DadaGrotesk-Book, Arial;
+}
+
+a {
+  color: #000;
+  outline: 0;
+}
+
+b, strong, h1, h2, h3 {
+  font-weight: normal;
+  font-family: DadaGrotesk-Bold;
+  padding: 0;
+  margin: 0;
+}
+
+.titre-page {
+  text-transform: uppercase;
+  font-family: DadaGrotesk-Heavy;
+  font-size: 42px;
+  margin: 50px 0 35px;
+  text-align: center;
+}
+
+.page-accueil .titre-page {
+  font-size: 148px;
+}
+
+/**
+ * Blocs de couleur.
+ */
+
+.bloc-lien {
+  text-align: center;
+  display: block;
+  color: #000;
+  text-decoration: none;
+  height: 250px;
+  padding-top: 100px;
+  font-size: 46px;
+  margin-bottom: 20px;
+  font-family: DadaGrotesk-Bold;
+  position: relative;
+}
+
+.bloc-lien .bloc-image {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+
+.bloc-lien:hover .bloc-image {
+  display: block;
+}
+
+.bloc-lien.demi {
+  float: left;
+  width: 470px;
+}
+
+.bloc-lien.petit {
+  height: auto;
+}
+
+.bloc-lien.trois-lignes {
+  height: 270px;
+  padding-top: 80px;
+}
+
+.bloc-lien.une-lignes {
+  height: 210px;
+  padding-top: 140px;
+}
+
+.bloc-lien.demi:nth-child(odd) {
+  margin-right: 20px;
+}
+
+.bg-rose {
+  background: #ffc2d6;
+}
+
+.bg-bleu {
+  background: #aae6ff;;
+}
+
+.bg-vert {
+  background: #c8e3b6;
+}
+
+.bg-jaune {
+  background: #fffa66;
+}
+
+/**
+ * Divers.
+ */
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}

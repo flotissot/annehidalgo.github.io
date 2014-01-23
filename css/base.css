@@ -1,0 +1,121 @@
+/**
+ * Styles hérités du site principal (header et footer).
+ */
+
+/**
+ * Header.
+ */
+
+#header {
+  border-bottom: 1px solid #dddddd;
+}
+
+#header #logo {
+  display: block;
+  text-decoration: none;
+  float: left;
+  padding: 10px 0;
+}
+
+#header #logo h1 {
+  font-family: DadaGrotesk-Bold, Arial;
+  font-size: 44px;
+}
+
+#header .top-social {
+  float: right;
+  padding: 27px 10px 0 0;
+}
+
+#header .top-social a {
+  margin: 10px 4px 0 0;
+}
+
+#header .recherche {
+  display: block;
+  text-decoration: none;
+  float: right;
+  background: url("http://static.anne-hidalgo.net/wrapper/loupe.png") no-repeat center left;
+  padding-left: 30px;
+  margin: 33px 0 0 0;
+  font-size: 13px;
+  font-family: DadaGrotesk-Bold;
+  text-transform: uppercase;
+}
+
+/**
+ * Nav.
+ */
+
+#nav {
+  border-bottom: 1px solid #dbdbdb;
+  height: 60px;
+}
+
+#nav ul, #nav li {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  display: block;
+  overflow: hidden;
+}
+
+#nav li {
+  float: left;
+  padding: 1px;
+}
+
+
+#nav li a.main-menu-link {
+  z-index: 11;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  width: 210px;
+  float: left;
+  padding: 18px 14px;
+  text-transform: uppercase;
+  font-size: 17px;
+  font-family: DadaGrotesk-Medium;
+  position: relative;
+}
+
+#nav li a.main-menu-link .fleche {
+  margin-left: 4px;
+}
+
+/**
+ * Footer.
+ */
+
+#footer {
+  clear: both;
+  width: 100%;
+  margin-top: 100px;
+}
+
+#footer ul,#footer li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#footer a {
+  display: block;
+  text-decoration: none;
+}
+
+#footer .menu-divers {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+#footer .menu-divers a,
+#footer .menu-divers li {
+  display: inline-block;
+}
+
+#footer .menu-divers a {
+  color: #999999;
+  margin: 0 10px;
+}

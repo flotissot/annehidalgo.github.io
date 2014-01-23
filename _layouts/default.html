@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+    {% include head.html %}
+  </head>
+
+  <body>
+
+
+    <div id="top">
+
+      <header id="header">
+        <div class="limiter clearfix">
+          {% include header.html %}
+        </div>
+      </header><!-- /#header -->
+
+      <nav id="nav">
+        <div class="limiter clearfix">
+          {% include nav.html %}
+        </div>
+      </nav><!-- /#nav -->
+
+    </div><!-- /#top -->
+
+
+    <div id="main" role="main" class="limiter page-{{ page.slug }}">
+
+      <h1 class="titre-page">{{ page.title }}</h1>
+
+      <div id="content" class="clearfix">
+        {{ content }}
+      </div><!-- /#content -->
+
+    </div><!-- /#main -->
+
+
+    <footer id="footer">
+      {% include footer.html %}
+    </footer><!-- /#footer -->
+
+
+  </body>
+</html>
