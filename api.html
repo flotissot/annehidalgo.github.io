@@ -1,0 +1,168 @@
+---
+layout: default
+title: API anne-hidalgo.net
+description: Découvrez l'API du site anne-hidalgo.net
+slug: api
+bootstrap: true
+base_url: "../"
+---
+
+<p>L’API du site anne-hidalgo.net vous permet d'accéder à une partie des contenus publiés sur le site pour développer des services et des applications autour de la campagne.</p>
+
+<p>Elle sera mise à jour et enrichie tout au long de la campagne.</p>
+
+<h2>Informations générales</h2>
+
+<h3>Clés d’API</h3>
+
+<p>La fréquence et le nombre de ressources disponibles sont limités si vous ne disposez pas d'une clé d'API (ou API key). Pour en obtenir une il suffit de faire une demande auprès de notre <a href="http://www.anne-hidalgo.net/contact?cid=3">équipe technique</a>. N'oubliez pas de nous donner un rapide descriptif de votre idée pour que nous puissions vous orienter au mieux dans les outils disponibles.</p>
+
+<h3>Structure des URLs</h3>
+
+<p>L’url de base de l’API est :</p>
+<pre>http://www.anne-hidalgo.net/api/</pre>
+
+<p>La structure des URLs est conçue de la manière suivante :</p>
+<pre>http://www.anne-hidalgo.net/api/[version]/[ressource].[format]</pre>
+
+<p>Par exemple :</p>
+<pre>http://www.anne-hidalgo.net/api/1/articles.json</pre>
+
+<p>Pour chaque ressource, vous pouvez préciser un certain nombre de paramètres pour filtrer les résultats. Par exemple, si vous souhaitez une liste des derniers articles de la catégorie "actualité" avec des images de "grand" format :</p>
+<pre>http://www.anne-hidalgo.net/api/1/articles.json?format=grand&categorie=actualite</pre>
+
+<h3>Erreurs</h3>
+
+<h4>Liste des champs</h4>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Clé</th>
+      <th>Valeur</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>status</strong></td>
+      <td>Code de statut HTTP.</td>
+    </tr>
+    <tr>
+      <td><strong>developerMessage</strong></td>
+      <td>Le contenu de ce champs vous donne une explication "technique" de l'erreur qui s'est produite, elle ne sera probablement d'aucune aide à vos utilisateurs.</td>
+    </tr>
+    <tr>
+      <td><strong>userMessage</strong></td>
+      <td>Message "grand public" que vous pouvez afficher aux utilisateurs de votre application.</td>
+    </tr>
+    <tr>
+      <td><strong>errorCode</strong></td>
+      <td>Code unique de l'erreur.</td>
+    </tr>
+    <tr>
+      <td><strong>moreInfo</strong></td>
+      <td>Une ou plusieurs URLs, séparées par des virgules, pour vous permettre de mieux comprendre le problème.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Ressources</h2>
+
+<h3>Les articles</h3>
+
+<h4>GET articles.json</h4>
+
+<p>Renvoie une liste des derniers articles</p>
+
+<h5>Paramètres</h5>
+
+<table class="table">
+  <tbody>
+    <tr>
+      <td><strong>arrondissement</strong></td>
+      <td>
+        <p>Permet de filtrer les résultats par arrondissement. Celui-ci doit être indiqué par son numéro, en chiffre uniquement.</p>
+        <p>Liste des valeurs possibles : <strong>1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20</strong></p>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>categorie</strong></td>
+      <td>
+        <p>Permet de filtrer les résultats par catégorie.</p>
+        <p>Valeurs possibles : <strong>actualite, communique, terrain, presse, presse_etrangere</strong></p>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>format</strong></td>
+      <td>
+        <p>Format des images</p>
+        <p>Valeurs acceptées :</p>
+        <ul>
+          <li><strong>petit</strong> : 100x100px</li>
+          <li><strong>moyen</strong> : 220x220px</li>
+          <li><strong>grand</strong> : 480x480px</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>geolocalise</strong></td>
+      <td>
+        <p>Permet de filtrer les résultats pour ne retenir que les articles géolocalisés.</p>
+        <p>Valeurs possibles : <strong>1</strong></p>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>api_key</strong></td>
+      <td>
+        <p>Pour indiquer votre clé d'API (ou API Key)</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h5>Réponse</h5>
+
+<table class="table">
+  <tbody>
+    <tr>
+      <td><strong>id</strong></td>
+      <td>Identifiant unique de l'article sur le site.</td>
+    </tr>
+    <tr>
+      <td><strong>titre</strong></td>
+      <td>Titre de l'article.</td>
+    </tr>
+    <tr>
+      <td><strong>shortUrl</strong></td>
+      <td>URL "courte" d'accès à l'article.</td>
+    </tr>
+    <tr>
+      <td><strong>url</strong></td>
+      <td>URL complète de l'article.</td>
+    </tr>
+    <tr>
+      <td><strong>timestamp</strong></td>
+      <td>Date de publication au format timestamp UNIX.</td>
+    </tr>
+    <tr>
+      <td><strong>arrondissement</strong></td>
+      <td>Si l'article est rattaché à un arrondissement, son nom complet (e.g. "9e arrondissement").</td>
+    </tr>
+    <tr>
+      <td><strong>arrondissementNumero</strong></td>
+      <td>Si l'article est rattaché à un arrondissement, son numéro (e.g. "9").</td>
+    </tr>
+    <tr>
+      <td><strong>latitude</strong></td>
+      <td>Latitude de l'article, si celui-ci est géolocalisé.</td>
+    </tr>
+    <tr>
+      <td><strong>longitude</strong></td>
+      <td>Longitude de l'article, si celui-ci est géolocalisé.</td>
+    </tr>
+    <tr>
+      <td><strong>image</strong></td>
+      <td>Url de l'image d'illustration de l'article (si elle existe), au format spécifié en paramètre (par défaut : 'moyen')</td>
+    </tr>
+  </tbody>
+</table>

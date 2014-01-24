@@ -77,6 +77,9 @@ b, strong, h1, h2, h3 {
 
 .bloc-lien.petit {
   height: auto;
+  font-size: 30px;
+  clear: both;
+  padding-top: 50px;
 }
 
 .bloc-lien.trois-lignes {
