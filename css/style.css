@@ -149,3 +149,127 @@ b, strong, h1, h2, h3 {
 .clearfix:after {
   clear: both;
 }
+
+/**
+ * Générateur de tracts
+ */
+
+/* ZONE DE TRI */
+.generator-tracts #filter {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-family: DadaGrotesk-Medium;
+}
+.generator-tracts #filter {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+.generator-tracts #filter li, #filter a {
+  display: block;
+  float: left;
+  margin: 0;
+}
+.generator-tracts #filter a {  
+  text-decoration: none; 
+  padding: 5px 10px;
+  text-transform: uppercase;
+}
+
+.generator-tracts #filter a:hover {  
+  background: #6fba55;
+}
+
+.generator-tracts #filter a.active {
+  background: yellow;
+}
+
+/* GRILLE DE DOCS */
+.generator-tracts #grid {
+  clear: both;
+  position: relative;
+  background: #fff;
+  overflow: hidden;
+}
+
+.generator-tracts .item {
+  -webkit-box-shadow: 0px 0px 1px #ccc;
+  -moz-box-shadow: 0px 0px 1px #ccc;
+  -o-box-shadow: 0px 0px 1px #ccc;
+  -ms-box-shadow: 0px 0px 1px #ccc;
+  box-shadow: 0px 0px 1px #ccc;
+  background: #fcfcfc;
+  width: 300px;
+  height: 158px;
+  margin: 10px 5px 10px 2px;
+  padding: 5px;
+  display: inline-block;
+  position: relative;
+  font-size: 11px;
+  font-family: DadaGrotesk-Book,Arial;
+}
+
+.generator-tracts .item h2 {
+  -webkit-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+    -ms-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  background: rgba(0,0,0,0.5);
+  width: 300px;
+  overflow: hidden;
+  position: absolute;
+  bottom: 5px;
+  z-index: 3;
+  text-align: center;
+  font-size: 15px;
+  color: #fff;
+}
+
+.generator-tracts .item h2 span {
+  display: block;
+  overflow: hidden;
+}
+
+.generator-tracts .item:hover h2 {
+  background: rgba(0,0,0,0.7);
+  padding: 10px 0px 10px 0px;
+}
+
+.generator-tracts .item h2 a.share {
+  margin-left: 2px;
+}
+
+.generator-tracts .item h2 a {
+  text-transform: uppercase;
+  width: 120px;
+  height: 60px;
+  margin-top: 5px;
+  margin-bottom: -80px;
+  padding: 0px 10px 0px 10px;
+  display: block;
+  visibility: hidden;
+  float: left;
+  font-size: 13px;
+  line-height: 25px;
+  color: #fff;
+  font-family: DadaGrotesk-Book,Arial;
+}
+
+.generator-tracts .item h2 a:hover {  
+  color: #e20040;
+}
+
+.generator-tracts .item:hover h2 a {
+  margin-top: 5px;
+  margin-bottom: 0px;
+  visibility: visible;
+}
+
+.generator-tracts .item img {
+  border: none;
+  width: 300px;
+  height: 158px;
+  cursor: pointer;
+}
