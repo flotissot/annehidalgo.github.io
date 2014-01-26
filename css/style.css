@@ -38,7 +38,14 @@ b, strong, h1, h2, h3 {
 }
 
 .page-accueil .titre-page {
+  display: block;
   font-size: 148px;
+  width: 960px;
+  height: 143px;
+  background: url('../img/participez.png') no-repeat top left;
+  text-indent: -9999em;
+  margin-bottom: 35px;
+  overflow: hidden;
 }
 
 /**
