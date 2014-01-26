@@ -119,3 +119,23 @@
   color: #999999;
   margin: 0 10px;
 }
+
+/**
+ * Social bar
+ */
+
+.social-bar {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.social-bar .social {
+  display: inline-block;
+}
+
+.social-bar .social.facebook {
+  position: relative;
+  top: 5px;
+  width: 140px;
+  overflow: hidden;
+}
